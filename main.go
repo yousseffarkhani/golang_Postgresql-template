@@ -12,12 +12,12 @@ import (
 	_ "github.com/lib/pq"
 )
 
-const (
+var (
 	driverName = "postgres"
 	host       = "db"
 	port       = "5432"
-	user       = "postgres"
-	password   = "secret"
+	user       = os.Getenv("POSTGRES_USER")
+	password   = os.Getenv("POSTGRES_PASSWORD")
 	dbname     = "basket"
 )
 

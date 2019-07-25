@@ -6,9 +6,9 @@ ENV APP_ENV $app_env
 WORKDIR /go/src/app
 ADD . .
 
-# Permet de télécharger toutes les dépendances
+# Downloads all dependecies
 RUN go get ./
-RUN go build
+RUN go install
 
 
 
